@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row pt-5 mb-3">
+    <div class="col-md-12">
+      <h2>Suivi des rejets de commandes</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card border-0 rounded-4 py-3 px-4 shadow">
+      <div class="col-md-12">
+        <ul class="list-group list-group-flush">
+          <li
+            *ngFor="let order of orders"
+            class="list-group-item list-group-item-action py-3"
+          >
+            <div class="row align-items-center justify-content-between">
+              <div class="col-6 col-md-2">
+                <p class="mb-0">{{ order.orderNumber }}</p>
+              </div>
+              <div class="col-6 col-md-2">
+                <p class="mb-0">{{ order.orderDate }}</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="mb-0">{{ order.name }}</p>
+              </div>
+              <div class="col-10 col-md-3">
+                <p class="mb-0">{{ order.error }}</p>
+              </div>
+              <div class="col-2 col-md-1 text-end">
+                <p class="mb-0">{{ order.status }}</p>
+              </div>
+              <div class="col-12 col-md-1 text-end">
+                <a href="#">Détail</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
